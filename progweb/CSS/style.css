@@ -1,0 +1,285 @@
+@charset "utf-8";
+
+html {
+    /* Rolagem vertical com animação/velocidade */
+    scroll-behavior: smooth;
+    font-size: 18px;
+}
+
+body {
+    background-color: grey;
+    font-family: Gotham, Verdana, sans-serif;
+    background-image: url(../imagens/back_page.png);
+    background-size: contain;
+    background-attachment: scroll;
+}
+
+b {
+    font-weight: bolder;
+    color: lawngreen;
+}
+
+div {
+    width: 90%;
+    margin: auto;
+    align-items: center;
+}
+
+/* Todas as imagems em modo responsivo */
+img { 
+    max-width: 100%;
+}
+
+/* CSS reset para alguns elementos */
+body, h1, h2, h3, p, figure {
+    margin: 0;
+    padding: 0;
+}
+
+nav, h2, h3, button {
+    font-family: Gotham, Verdana, sans-serif;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-family: Gotham, Verdana, sans-serif;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+p {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 0px;
+    text-align: justify;
+    background-color: teal;
+    color: white;
+    font-family: Gotham Light, Verdana, sans-serif;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+ul {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: justify;
+    background-color: teal;
+    color: white;
+    font-family: Gotham Light, Verdana, sans-serif;
+    align-items: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+li {
+    padding-left: 10px;
+    text-align: left;
+    padding-top: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+header {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: lawngreen;
+    text-align: center;
+    margin: auto;
+    padding-right: 30px;
+    padding-left: 30px;
+    border-radius: 30px;
+}
+
+.figure {
+    border-radius: 30px ;
+    margin: auto;
+    width: 100%;
+}
+
+.ul {
+    background-color: grey;
+    color: rgba(255, 255, 255, 0);
+    width: 1px
+}
+
+.button {
+    background-color: lawngreen;
+    border-radius: 30px;
+}
+
+.button1 {
+    background-color: lawngreen;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.h2 {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding-left: 30px; 
+    padding-right: 30px;
+    background-color: lawngreen;
+}
+
+.chav {
+    color: lawngreen;
+    font-weight: bold;
+}
+
+.chav1 {
+    color: teal;
+    font-weight: bold;
+}
+
+.chav2 {
+    color:white;
+    font-weight: bold;
+}
+
+.padding { 
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.class {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.class1 {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.carga {
+    padding-bottom: 30px;
+}
+
+/* REGRA PROVISÓRIA
+(usada apenas para facilitar a visualização
+de cada área que será modificada) */
+/* h1 { background-color: red; }
+h1 a { background-color: green; }
+nav { background-color: yellow; }
+nav a { background-color: lightblue; } */
+
+/* Habilitar o modo flex para todos os
+elementos indicados */
+h1, h1 a, nav, nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav, nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    font-size: 0.8rem;
+    height: 10px;
+    width: 100%;
+    color: white;
+    text-decoration: none;
+    padding: 4px;
+    text-transform: uppercase;
+    font-size: x-small;
+    width: 90px;
+}
+
+h1 {
+    padding: 5px 0;
+    font-size: 1.6rem;
+}
+
+input, textarea {
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 1.5%;
+}
+
+
+/* Media Queries:
+Regras que só serão aplicadas quando
+o site for visualizado em determinados tamanhos
+de tela */
+
+/* 1º Breakpoint:
+Telas com largura à partir de 700px */
+@media screen and (min-width: 300px){
+    header div {
+        display: flex;
+        justify-content: space-between;
+        /* box-shadow: red 0 0 20px inset; */
+        width: 95%; /* a mesma do main (conteudo) */
+        margin: auto; /* pra centralizar */
+    }
+
+    h1 {
+        margin: auto;
+        display: flex;
+        width: 80%;
+        font-size: 1.1rem;
+    }
+
+    /* Habilitando flex para a div com a class grupo */
+    .grupo {
+        display: flex;
+        justify-content: space-between;
+
+        /* criar uma quebra entre as seções
+        (obs.: isso depende de uma largura
+        aplicada às seções */
+        flex-wrap: wrap; 
+    }
+
+    .grupo section, .grupo figure { width: 49%; }
+}
+
+/* 2º breakpoint:
+Telas com largura à partir de 850px */
+@media screen and (min-width: 850px) {
+    html { font-size: 20px; }
+    h1 {
+        margin: auto;
+        display: flex;
+        width: 80%;
+        font-size: 1.8rem;
+    }
+}
+
+/* 3º breakpoint:
+Telas com largura à partir de 1000px */
+@media screen and (min-width: 1000px) {
+    html { font-size: 20px; }
+    h1 img { width: 80%; }
+    header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+    }
+    
+
+    /* Limitar o tamanho do header div
+    e do conteúdo (main), evitando que aumente
+    infinitamente. */
+    header div, main {
+        max-width: 1000px;
+    }
+}
